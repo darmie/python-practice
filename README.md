@@ -33,6 +33,14 @@ python-practice/
 │   ├── queries.py                   # Complex query examples
 │   └── raw_sql.py                   # Raw SQL operations
 │
+├── coderpad_practice/               # CoderPad-style assessment problems
+│   ├── problem_01_rate_limiter.py   # Rate limiting system
+│   ├── problem_02_lru_cache.py      # LRU cache implementation
+│   ├── problem_03_url_shortener.py  # URL shortening service
+│   ├── problem_04_text_analyzer.py  # Text analysis tool
+│   ├── problem_05_inventory_system.py # Inventory management
+│   └── README.md                    # CoderPad practice guide
+│
 ├── testing/                         # Testing examples
 │   ├── test_algorithms.py           # Algorithm tests
 │   ├── test_oop_design.py           # OOP pattern tests
@@ -213,6 +221,51 @@ pytest -m unit
 # Skip slow tests
 pytest -m "not slow"
 ```
+
+### 7. CoderPad Practice Problems
+
+Real-world problems designed to mirror actual CoderPad technical assessments.
+
+**Key Topics:**
+- System Design (Rate Limiter, LRU Cache, URL Shortener)
+- Business Logic (Inventory Management)
+- Data Processing (Text Analysis)
+- Thread Safety and Concurrency
+- Algorithm Optimization
+- Real-world Problem Solving
+
+**Available Problems:**
+1. **Rate Limiter** - Implement request throttling with sliding window
+2. **LRU Cache** - O(1) cache with least-recently-used eviction
+3. **URL Shortener** - Design URL shortening service with encoding
+4. **Text Analyzer** - Comprehensive text analysis and statistics
+5. **Inventory System** - Thread-safe inventory management with reporting
+
+**Example Usage:**
+```python
+from coderpad_practice.problem_02_lru_cache import LRUCache
+
+cache = LRUCache(capacity=3)
+cache.put(1, "one")
+cache.put(2, "two")
+value = cache.get(1)  # Returns "one" in O(1)
+```
+
+**Running Problems:**
+```bash
+# Run individual problem with tests
+python coderpad_practice/problem_01_rate_limiter.py
+
+# See detailed guide
+cat coderpad_practice/README.md
+```
+
+These problems are specifically designed for CoderPad assessments, focusing on:
+- Clean, production-ready code
+- Proper error handling and edge cases
+- Time/space complexity optimization
+- Clear communication of trade-offs
+- System design thinking
 
 ## Practice Exercises
 
